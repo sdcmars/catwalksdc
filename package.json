@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^16.3.0",
+    "pg": "^8.6.0",
+    "pg-copy-streams": "^5.1.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.2"
+  },
+  "name": "sdcproducts",
+  "description": "This project's goal is to create a backend for the catwalk FEC project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdcmars/sdcproducts.git"
+  },
+  "author": "Sam Imhoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdcmars/sdcproducts/issues"
+  },
+  "homepage": "https://github.com/sdcmars/sdcproducts#readme"
+}
