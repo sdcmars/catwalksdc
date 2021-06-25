@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS product;
+
 CREATE DATABASE product;
 
 \c product;
@@ -18,7 +18,7 @@ CREATE TABLE related (
   id INT PRIMARY KEY NOT NULL,
   product_id INT NOT NULL,
   related_id INT NOT NULL
-);\d
+);
 
 DROP TABLE IF EXISTS photos;
 CREATE TABLE photos (
@@ -41,7 +41,15 @@ CREATE TABLE styles (
   id INT PRIMARY KEY NOT NULL,
   product_id INT NOT NULL,
   name VARCHAR(50) NOT NULL,
-  sale_price INT NULL,
-  original_price INT NOT NULL,
+  sale_price VARCHAR(50) NULL,
+  original_price INT NULL,
   default_style INT NOT NULL
-)
+);
+
+DROP TABLE IF EXISTS features;
+CREATE TABLE features (
+  id INT PRIMARY KEY NOT NULL,
+  product_id INT NOT NULL,
+  feature VARCHAR(150) NULL,
+  value VARCHAR(300) NULL
+);
