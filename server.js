@@ -14,11 +14,13 @@ app.get('/products/:product_id', (req, res) => {
   console.log('Req params: ', req.params);
   //console.log(urlObj);
   return db.getProduct(req.params.product_id)
-    .then(response => res.send(response))
+    .then((response) => {
+      var features =
+      console.log('Response from product query: ', response);
+      res.send(response);
+    })
     .catch(err => res.send(err));
 })
-
-
 
 app.listen(port, () => {
   console.log('listening on port 3000');
