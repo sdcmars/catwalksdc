@@ -53,3 +53,21 @@ CREATE TABLE features (
   feature VARCHAR(150) NULL,
   value VARCHAR(300) NULL
 );
+
+
+-- CREATE INDEX products_id_idx
+-- ON products (id);
+
+-- CREATE INDEX features_product_id_idx
+-- ON features (product_id);
+
+-- CREATE INDEX styles_product_id_idx
+-- ON styles (id, product_id);
+
+-- CREATE INDEX photos_style_id_idx
+-- ON photos (style_id);
+
+-- CREATE INDEX skus_style_id_idx
+-- ON skus (style_id);
+
+

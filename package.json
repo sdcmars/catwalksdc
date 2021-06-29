@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/sdcmars/sdcproducts/issues"
   },
-  "homepage": "https://github.com/sdcmars/sdcproducts#readme"
+  "homepage": "https://github.com/sdcmars/sdcproducts#readme",
+  "devDependencies": {
+    "artillery": "^1.7.5"
+  }
 }

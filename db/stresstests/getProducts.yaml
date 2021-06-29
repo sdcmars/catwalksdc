@@ -1,0 +1,21 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+scenarios:
+  - flow:
+    - get:
+        url: "/products/2424/styles"
+
+
+# ANALYZE SELECT
+#       products.id,
+#       products.name,
+#       products.slogan, products.description, products.category, products.default_price,
+#       features.feature, features.value
+#     FROM
+#       products
+#     FULL JOIN
+#       features ON products.id = features.product_id
+#     WHERE products.id = 28328;

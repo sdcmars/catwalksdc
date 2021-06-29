@@ -11,12 +11,29 @@ app.use(express.json());
 
 app.get('/products/:product_id', (req, res) => {
   //let urlObj = url.parse(req.url, true);
-  console.log('Req params: ', req.params);
   //console.log(urlObj);
   return db.getProduct(req.params.product_id)
     .then((response) => {
-      var features =
-      console.log('Response from product query: ', response);
+      res.send(response);
+    })
+    .catch(err => res.send(err));
+})
+
+app.get('/products/:product_id/styles', (req, res) => {
+  return db.getStyles(req.params.product_id)
+    .then((response) => {
+      //console.log('Response from styles query: ', response);
+      res.send(response);
+    })
+    .catch(err => {
+      res.send(err);
+      console.log('ERROR: ', err);
+    });
+});
+
+app.get('/products/:product_id/related', (req, res) => {
+  return db.getRelated(req.params.product_id)
+    .then((response) => {
       res.send(response);
     })
     .catch(err => res.send(err));
