@@ -2,11 +2,11 @@ config:
   target: 'http://localhost:5000'
   phases:
     - duration: 60
-      arrivalRate: 20
+      arrivalRate: 400
 scenarios:
   - flow:
     - get:
-        url: "/products/242234/styles"
+        url: "/products/242234"
 
 
 # ANALYZE SELECT

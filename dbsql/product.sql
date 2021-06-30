@@ -69,4 +69,6 @@ CREATE TABLE features (
 -- CREATE INDEX skus_style_id_idx
 -- ON skus (style_id);
 
+-- CREATE INDEX related_product_id_idx
+-- ON related (product_id);
 

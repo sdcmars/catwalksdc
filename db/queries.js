@@ -65,7 +65,7 @@ const getStyles = (id) => {
           }
           finObj.results.push(styleObj);
         }
-        return res.rows;
+        return finObj;
       })
     }).catch(err => console.log('err: ', err));
 };
