@@ -55,14 +55,13 @@ CREATE TABLE features (
 );
 
 
--- CREATE INDEX products_id_idx
--- ON products (id);
+
 
 -- CREATE INDEX features_product_id_idx
 -- ON features (product_id);
 
 -- CREATE INDEX styles_product_id_idx
--- ON styles (id, product_id);
+-- ON styles (product_id);
 
 -- CREATE INDEX photos_style_id_idx
 -- ON photos (style_id);

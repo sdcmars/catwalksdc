@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const axios = require('axios');
 const db = require('./db/queries.js');
 const url = require('url');
 
-const port = process.env.PORT || 3000;
-
+const port = 5000;
+// const port = process.env.PORT || 3000;
 app.use(express.json());
 
 
@@ -16,7 +15,11 @@ app.get('/products/:product_id', (req, res) => {
     .then((response) => {
       res.send(response);
     })
-    .catch(err => res.send(err));
+    .catch(err => {
+      console.log('Error from products: ', err);
+      res.send(err);
+
+    });
 })
 
 app.get('/products/:product_id/styles', (req, res) => {
@@ -40,7 +43,7 @@ app.get('/products/:product_id/related', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log('listening on port 3000');
+  console.log('listening on port 5000');
 });
 
 

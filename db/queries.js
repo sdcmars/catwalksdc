@@ -21,7 +21,8 @@ const getStyles = (id) => {
   return pool.connect()
     .then(client => {
       return client.query(query, value).then(res => {
-        console.log('Im working?');
+        client.release();
+        // console.log('Im working?');
         var stylesSorted = {};
         //console.log('Basic res: ', res.rows);
         for (var i = 0; i < res.rows.length; i++) {
@@ -64,7 +65,7 @@ const getStyles = (id) => {
           }
           finObj.results.push(styleObj);
         }
-        return finObj;
+        return res.rows;
       })
     }).catch(err => console.log('err: ', err));
 };
@@ -86,6 +87,7 @@ const getProduct = (id) => {
   return pool.connect()
     .then(client => {
       return client.query(query, value).then(res => {
+        client.release();
         var features = [];
         var baseObj = {};
         var firstRes = res.rows[0];
@@ -120,6 +122,7 @@ const getRelated = (id) => {
   return pool.connect()
   .then(client => {
     return client.query(query, value).then(res => {
+      client.release();
 
       var related = [];
       for (var i = 0; i < res.rows.length; i++) {
