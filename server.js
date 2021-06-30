@@ -3,8 +3,7 @@ const app = express();
 const db = require('./db/queries.js');
 const url = require('url');
 
-const port = 5000;
-// const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 app.use(express.json());
 
 
