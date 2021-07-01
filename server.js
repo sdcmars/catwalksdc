@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const db = require('./db/queries.js');
@@ -5,6 +6,7 @@ const url = require('url');
 
 const port = process.env.PORT || 3000;
 app.use(express.json());
+app.use(compression());
 
 
 app.get('/products/:product_id', (req, res) => {
@@ -42,7 +44,7 @@ app.get('/products/:product_id/related', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log('listening on port 5000');
+  console.log('listening on port 3000');
 });
 
 
