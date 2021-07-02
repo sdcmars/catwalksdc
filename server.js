@@ -8,6 +8,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(compression());
 
+app.get('./loaderio-459be6f95a00f65f762d59f2ee0cd2d6', (req, res) => {
+  res.send('loaderio-459be6f95a00f65f762d59f2ee0cd2d6');
+})
 
 app.get('/products/:product_id', (req, res) => {
   //let urlObj = url.parse(req.url, true);
